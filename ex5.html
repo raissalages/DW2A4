@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <script>
+        function calculaFatorial(numero){
+            
+            let fatorial = numero;
+
+            for(let i = numero - 1; i > 0; i--){
+                fatorial *= i ;
+            }
+
+            return fatorial;
+        }
+
+        function calculaArranjo(numeroTotal, numeroElementosPorGrupo){
+            var arranjo = calculaFatorial(numeroTotal) / (calculaFatorial(numeroElementosPorGrupo) * calculaFatorial((numeroTotal - numeroElementosPorGrupo)));
+
+            return arranjo;
+        }
+
+        var numeroTotal = window.prompt("Digite o número total de elementos do arranjo:")
+        numeroTotal = parseInt(numeroTotal);
+
+        var numeroElementosPorGrupo = window.prompt("Digite o número total de elementos de cada grupo:")
+        numeroElementosPorGrupo = parseInt(numeroElementosPorGrupo);
+
+        //console.log(calculaFatorial(numeroTotal))
+        //console.log(calculaFatorial(numeroElementosPorGrupo))
+        //console.log(calculaFatorial(numeroTotal - numeroElementosPorGrupo))
+        alert(calculaArranjo(numeroTotal, numeroElementosPorGrupo));
+    </script>
+</body>
+</html>

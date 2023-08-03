@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio1</title>
+</head>
+<body>
+    <script>
+
+        const qtdeNumeros = 3;
+        const numeros = []
+        var somaNumeros = 0;
+        
+        for(i = 0; i < qtdeNumeros; i++){
+            var numero = window.prompt("Insira um número: ");
+            let numeroInt = parseFloat(numero);
+            numeros.push(numeroInt);
+            somaNumeros += numeros[i];
+        }
+
+        var media = somaNumeros / numeros.length;
+
+    
+        alert(media)
+
+    </script>
+</body>
+</html>

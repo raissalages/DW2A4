@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        var numeros = [];
+        var somaNumeros = 0;
+        var qtdeNumeros = 0;
+        var maiorNumero = 0;
+        var menorNumero = 0;
+        var numerosAcimaDaMedia = [];
+        var numerosAbaixoDaMedia = [];
+
+        qtdeNumeros = window.prompt("Insira a quantidade de números para inserir");
+
+
+        for(let i = 1; i <= qtdeNumeros; i++){
+            var numero = window.prompt("Digite o " + i + "º número");
+            numero = parseFloat(numero);
+            numeros.push(numero);    
+            somaNumeros += numero;
+        }
+
+        var media = somaNumeros / numeros.length;
+
+
+        for(let i = 0; i < qtdeNumeros; i++){
+
+            if(media > numeros[i]){
+                numerosAbaixoDaMedia.push(numeros[i]);
+            }
+            else{
+                numerosAcimaDaMedia.push(numeros[i]);
+            }
+
+        }
+
+
+        alert(
+                "Números digitados: " + numeros +
+                "\nMaior número: " + Math.max(...numeros) +
+                "\nMenor número: " + Math.min(...numeros) +
+                "\nMedia: " + media +
+                "\nNúmeros acima da media: " + numerosAcimaDaMedia+
+                "\nNúmeros abaixo da media: " + numerosAbaixoDaMedia
+                
+            );
+        
+
+
+        
+        
+
+    </script>
+</body>
+</html>

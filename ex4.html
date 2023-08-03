@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    <script>
+        var capitalInicial = window.prompt("Insira o valor investido:");
+        capitalInicial  = parseFloat(capitalInicial);
+
+        var taxaJurosMensal = window.prompt("Insira a taxa de juros negociada:");
+        taxaJurosMensal = parseFloat(taxaJurosMensal);
+
+
+        var tempoMeses = window.prompt("Insira o tempo (em meses) da duração do investimento");
+        tempoMeses = parseInt(tempoMeses);
+
+
+        var montante = capitalInicial * (1 + taxaJurosMensal) ** tempoMeses;
+
+        alert("O seu retorno é de " + montante)
+
+    </script>
+</body>
+</html>
